@@ -1,4 +1,4 @@
- import axios from "axios";
+﻿ import axios from "axios";
 import { useEffect, useState } from "react";
 import "./History.css";
 
@@ -14,12 +14,12 @@ function History() {
 
                 // Backend se daily records fetch kar rahe hain
                 const recordsResponse = await axios.get(
-                    "http://localhost:3000/daily-records"
+                    "https://sadhana-x03z.onrender.com/daily-records"
                 );
 
                 // Backend se tasks fetch kar rahe hain
                 const tasksResponse = await axios.get(
-                    "http://localhost:3000/tasks"
+                    "https://sadhana-x03z.onrender.com/tasks"
                 );
 
                 const records = recordsResponse.data;

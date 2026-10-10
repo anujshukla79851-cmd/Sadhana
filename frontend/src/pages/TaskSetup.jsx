@@ -1,4 +1,4 @@
- import axios from "axios";
+﻿ import axios from "axios";
 import "./TaskSetup.css";
 import { useState, useEffect } from "react";
 
@@ -26,7 +26,7 @@ function Tasksetup() {
         const fetchTasks = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:3000/tasks"
+                    "https://sadhana-x03z.onrender.com/tasks"
                 );
 
                 setTasks(response.data);
@@ -114,7 +114,7 @@ function Tasksetup() {
                 const taskId = tasks[editTask]._id;
 
                 const response = await axios.patch(
-                    `http://localhost:3000/tasks/${taskId}`,
+                    `https://sadhana-x03z.onrender.com/tasks/${taskId}`,
                     newTask
                 );
 
@@ -126,7 +126,7 @@ function Tasksetup() {
             } else {
                 // New task create
                 const response = await axios.post(
-                    "http://localhost:3000/tasks",
+                    "https://sadhana-x03z.onrender.com/tasks",
                     newTask
                 );
 
@@ -148,7 +148,7 @@ function Tasksetup() {
     const deleteTask = async (id) => {
         try {
             await axios.delete(
-                `http://localhost:3000/tasks/${id}`
+                `https://sadhana-x03z.onrender.com/tasks/${id}`
             );
 
             setTasks((previousTasks) =>

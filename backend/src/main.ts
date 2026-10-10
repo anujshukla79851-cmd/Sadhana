@@ -10,7 +10,7 @@ async function bootstrap() {
 
   // Frontend ko backend API access karne ki permission
   app.enableCors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: [process.env.FRONTEND_URL || 'https://anujshukla79851-cmd.github.io', 'http://localhost:5173'],
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
     credentials: true,
   });
@@ -25,3 +25,4 @@ async function bootstrap() {
 }
 
 bootstrap();
+

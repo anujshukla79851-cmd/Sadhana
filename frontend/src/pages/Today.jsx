@@ -1,4 +1,4 @@
- 
+﻿ 
 import axios from "axios";
 import { useEffect, useState } from "react";
 import "./Today.css";
@@ -49,7 +49,7 @@ function Today() {
         const fetchTasks = async () => {
             try {
                 const response = await axios.get(
-                    "http://localhost:3000/tasks"
+                    "https://sadhana-x03z.onrender.com/tasks"
                 );
                 setTasks(response.data);
             } catch (error) {
@@ -143,7 +143,7 @@ function Today() {
                 };
 
                 const response = await axios.post(
-                    "http://localhost:3000/daily-records",
+                    "https://sadhana-x03z.onrender.com/daily-records",
                     recordData
                 );
 
@@ -325,3 +325,4 @@ function Today() {
 }
 
 export default Today;
+
