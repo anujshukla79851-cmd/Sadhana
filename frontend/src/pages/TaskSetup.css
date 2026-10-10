@@ -1,0 +1,332 @@
+ 
+/* ========================================
+   SADHNA - TASK SETUP PAGE
+======================================== */
+
+.task-setup {
+    width: min(1100px, calc(100% - 40px));
+    margin: 40px auto;
+    padding: 32px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    color: #1e293b;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.07);
+    font-family: inherit;
+}
+
+/* ========================================
+   PAGE HEADING
+======================================== */
+
+.task-setup > h1 {
+    margin: 0 0 28px;
+    color: #1e1b4b;
+    font-size: 30px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+.task-setup > h1::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 4px;
+    margin: 12px auto 0;
+
+    background: linear-gradient(90deg, #7c3aed, #a78bfa);
+    border-radius: 10px;
+}
+
+/* ========================================
+   TASK TABLE
+======================================== */
+
+.task-table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Equal column widths */
+
+.task-table th:nth-child(1),
+.task-table td:nth-child(1) {
+    width: 25%;
+}
+
+.task-table th:nth-child(2),
+.task-table td:nth-child(2) {
+    width: 25%;
+}
+
+.task-table th:nth-child(3),
+.task-table td:nth-child(3) {
+    width: 25%;
+}
+
+.task-table th:nth-child(4),
+.task-table td:nth-child(4) {
+    width: 25%;
+}
+
+/* Table heading */
+
+.task-table thead {
+    background: #f3efff;
+}
+
+.task-table th {
+    padding: 17px 12px;
+
+    color: #5b21b6;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+
+    border-bottom: 1px solid #ddd6fe;
+}
+
+/* Table data */
+
+.task-table td {
+    padding: 18px 12px;
+
+    color: #334155;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+
+    border-bottom: 1px solid #f1f5f9;
+    overflow-wrap: anywhere;
+}
+
+/* Alternating rows */
+
+.task-table tbody tr:nth-child(even) {
+    background: #fcfbff;
+}
+
+/* Hover effect */
+
+.task-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.task-table tbody tr:hover {
+    background: #f5f3ff;
+}
+
+/* Last row border */
+
+.task-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================
+   EDIT AND DELETE BUTTONS
+======================================== */
+
+.task-table td button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 3px;
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.task-table td button:hover {
+    transform: translateY(-1px);
+}
+
+/* Edit button */
+
+.task-table .edit-btn,
+.task-table .edit-button {
+    background: #ede9fe;
+    color: #6d28d9;
+}
+
+.task-table .edit-btn:hover,
+.task-table .edit-button:hover {
+    background: #ddd6fe;
+}
+
+/* Delete button */
+
+.task-table .delete-btn,
+.task-table .delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.task-table .delete-btn:hover,
+.task-table .delete-button:hover {
+    background: #fecaca;
+}
+
+/* ========================================
+   ADD TASK BUTTON
+======================================== */
+
+.add-task-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    min-height: 48px;
+    margin: 26px auto 0;
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 14px rgba(109, 40, 217, 0.22);
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.add-task-btn:hover {
+    background: linear-gradient(135deg, #6d28d9, #4c1d95);
+    box-shadow: 0 8px 18px rgba(109, 40, 217, 0.3);
+    transform: translateY(-2px);
+}
+
+.add-task-btn:active {
+    transform: translateY(0);
+}
+
+.add-task-btn:focus-visible {
+    outline: 3px solid #c4b5fd;
+    outline-offset: 3px;
+}
+
+/* ========================================
+   TASK FORM PLACEMENT
+   Actual form design is in TaskForm.css
+======================================== */
+
+.task-setup .task-form {
+    width: min(100%, 520px);
+    margin: 32px auto 0;
+}
+
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .task-setup {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .task-setup > h1 {
+        font-size: 26px;
+        margin-bottom: 24px;
+    }
+
+    .task-table th {
+        padding: 14px 8px;
+        font-size: 12px;
+    }
+
+    .task-table td {
+        padding: 14px 8px;
+        font-size: 12px;
+    }
+
+    .task-table td button {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 480px) {
+    .task-setup {
+        width: calc(100% - 16px);
+        margin: 16px auto;
+        padding: 14px;
+        border-radius: 13px;
+    }
+
+    .task-setup > h1 {
+        font-size: 23px;
+    }
+
+    .task-table {
+        table-layout: auto;
+    }
+
+    .task-table th {
+        padding: 12px 6px;
+        font-size: 11px;
+        white-space: normal;
+    }
+
+    .task-table td {
+        padding: 12px 5px;
+        font-size: 11px;
+        overflow-wrap: anywhere;
+    }
+
+    .task-table td button {
+        margin: 2px;
+        padding: 7px 6px;
+        font-size: 10px;
+    }
+
+    .add-task-btn {
+        width: 100%;
+    }
+
+    .task-setup .task-form {
+        margin-top: 22px;
+    }
+}

@@ -1,0 +1,236 @@
+ 
+/* ===== Today Page ===== */
+
+.today-page {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+.today-page h1 {
+    margin: 0 0 25px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* ===== Today Table ===== */
+
+.today-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+}
+
+.today-table th,
+.today-table td {
+    border: 1px solid #e5e7eb;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.today-table th {
+    background: #303fe5;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.today-table td {
+    font-size: 14px;
+}
+
+.today-table tbody tr:nth-child(even) {
+    background: #f8f9ff;
+}
+
+.today-table tbody tr:hover {
+    background: #f0f2ff;
+}
+
+/* ===== Actual Time: Hour, Minute, AM/PM ===== */
+
+.actual-time-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-width: 0;
+}
+
+.actual-time-group select {
+    width: 68px;
+    min-width: 0;
+    height: 40px;
+    padding: 6px 4px;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    background: #fff;
+    color: #222;
+    font-size: 13px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.actual-time-group select:last-child {
+    width: 65px;
+}
+
+.actual-time-group select:focus {
+    outline: none;
+    border-color: #3949e8;
+    box-shadow: 0 0 0 2px rgba(57, 73, 232, 0.12);
+}
+
+.actual-time-group select:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Colon between hour and minute */
+
+.actual-time-group span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+/* ===== Not Done Checkbox ===== */
+
+.today-table input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #303fe5;
+    cursor: pointer;
+}
+
+/* ===== Save Today Button ===== */
+
+.save-today-btn {
+    display: block;
+    margin: 24px auto;
+    padding: 12px 26px;
+    border: none;
+    border-radius: 8px;
+    background: #303fe5;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.save-today-btn:hover {
+    background: #2533c8;
+}
+
+.save-today-btn:active {
+    transform: scale(0.98);
+}
+
+.save-today-btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* ===== Responsive Layout ===== */
+
+@media (max-width: 900px) {
+    .today-page {
+        padding: 20px 12px;
+    }
+
+    .today-table th,
+    .today-table td {
+        padding: 9px 6px;
+        font-size: 12px;
+    }
+
+    .actual-time-group {
+        gap: 3px;
+    }
+
+    .actual-time-group select {
+        width: 58px;
+        height: 36px;
+        padding: 4px 2px;
+        font-size: 12px;
+    }
+
+    .actual-time-group select:last-child {
+        width: 52px;
+    }
+}
+
+@media (max-width: 600px) {
+    .today-page {
+        padding: 15px 8px;
+    }
+
+    .today-page h1 {
+        font-size: 25px;
+    }
+
+    .today-table {
+        min-width: 720px;
+    }
+
+    .today-page {
+        overflow-x: auto;
+    }
+
+    .today-table th,
+    .today-table td {
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+
+    .actual-time-group select {
+        width: 55px;
+    }
+
+    .actual-time-group select:last-child {
+        width: 50px;
+    }
+}
+
+
+.today-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+.today-table th,
+.today-table td {
+  padding: 12px 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.today-table td select {
+  padding: 8px;
+  margin: 3px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  font-size: 14px;
+  min-width: 65px;
+}
+
+.today-table td select:last-child {
+  min-width: 65px;
+}
+
+.today-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}

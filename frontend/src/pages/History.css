@@ -1,0 +1,152 @@
+ /* ===== History Page ===== */
+.history-page {
+  width: 92%;
+  max-width: 1400px;
+  margin: 35px auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e9eaf2;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(31, 41, 55, 0.06);
+  box-sizing: border-box;
+}
+
+/* ===== Page Heading ===== */
+.history-page h1 {
+  margin: 0 0 8px;
+  color: #1e293b;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+}
+
+.history-page h1::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 30px;
+  margin-right: 12px;
+  vertical-align: -4px;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #6366f1, #8b5cf6);
+}
+
+/* ===== Optional Description ===== */
+.history-subtitle {
+  margin: 0 0 24px;
+  color: #8490a5;
+  font-size: 14px;
+}
+
+/* ===== Table Wrapper ===== */
+.history-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e9eaf2;
+  border-radius: 13px;
+}
+
+/* ===== History Table ===== */
+.history-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  text-align: left;
+}
+
+/* Table Heading */
+.history-table thead th {
+  padding: 16px 18px;
+  background: #f5f5ff;
+  color: #5145cd;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  border-bottom: 1px solid #e5e7f5;
+}
+
+/* Table Data */
+.history-table tbody td {
+  padding: 15px 18px;
+  color: #475569;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f1f5;
+  white-space: nowrap;
+}
+
+/* Alternate Rows */
+.history-table tbody tr:nth-child(even) {
+  background: #fafaff;
+}
+
+/* Hover Effect */
+.history-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.history-table tbody tr:hover {
+  background: #f1f0ff;
+}
+
+/* Last Row */
+.history-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* First Column */
+.history-table tbody td:first-child {
+  color: #64748b;
+  font-weight: 600;
+}
+
+/* Task Name */
+.history-table tbody td:nth-child(2) {
+  color: #24324a;
+  font-weight: 700;
+}
+
+/* Marks Column */
+.history-table tbody td:last-child {
+  color: #5145cd;
+  font-weight: 800;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .history-page {
+    width: 95%;
+    margin: 22px auto;
+    padding: 20px 14px;
+    border-radius: 15px;
+  }
+
+  .history-page h1 {
+    font-size: 25px;
+  }
+
+  .history-table thead th,
+  .history-table tbody td {
+    padding: 13px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-page {
+    padding: 18px 10px;
+  }
+
+  .history-page h1 {
+    font-size: 23px;
+  }
+
+  .history-table thead th {
+    font-size: 12px;
+  }
+
+  .history-table tbody td {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,551 @@
+/* =========================================
+   SADHNA - PREMIUM TASK FORM
+========================================= */
+
+.task-form {
+    width: calc(100% - 32px);
+    max-width: 620px;
+    margin: 35px auto;
+    padding: 34px;
+
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border: 1px solid #e9e3f5;
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(65, 42, 115, 0.09),
+        0 4px 14px rgba(65, 42, 115, 0.04);
+
+    font-family: inherit;
+    transition: box-shadow 0.25s ease;
+}
+
+.task-form:hover {
+    box-shadow:
+        0 24px 65px rgba(65, 42, 115, 0.12),
+        0 5px 16px rgba(65, 42, 115, 0.05);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.task-form .form-heading {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-bottom: 30px;
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid #eee8f7;
+}
+
+.task-form .form-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6335c9
+    );
+
+    color: #ffffff;
+    font-size: 27px;
+
+    box-shadow: 0 8px 18px rgba(112, 69, 211, 0.25);
+}
+
+.task-form .form-heading h2 {
+    margin: 0 0 7px;
+
+    color: #241638;
+    font-size: 27px;
+    font-weight: 750;
+    letter-spacing: -0.7px;
+}
+
+.task-form .form-heading p {
+    margin: 0;
+
+    color: #898197;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   FORM LABELS
+========================================= */
+
+.task-form .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.task-form .form-field > label {
+    color: #38294e;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.25px;
+}
+
+/* =========================================
+   INPUTS AND SELECTS
+========================================= */
+
+.task-form input,
+.task-form select {
+    display: block;
+
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+
+    margin: 0;
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e4deed;
+    border-radius: 12px;
+
+    background: #faf9fd;
+    color: #302440;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.task-form input::placeholder {
+    color: #aaa2b8;
+}
+
+.task-form input:hover,
+.task-form select:hover {
+    border-color: #c8b5ee;
+    background: #ffffff;
+}
+
+.task-form input:focus,
+.task-form select:focus {
+    border-color: #8052df;
+    background: #ffffff;
+
+    box-shadow: 0 0 0 4px rgba(128, 82, 223, 0.12);
+}
+
+/* Hide number arrows */
+
+.task-form input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.task-form input[type="number"]::-webkit-inner-spin-button,
+.task-form input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* =========================================
+   DESIRED TIME
+========================================= */
+
+.task-form .desired-time-group {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        12px
+        minmax(0, 1fr)
+        minmax(0, 1.1fr);
+
+    align-items: center;
+    gap: 9px;
+
+    width: 100%;
+    min-width: 0;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e5dcfa;
+    border-radius: 16px;
+
+    background: linear-gradient(
+        135deg,
+        #faf7ff,
+        #f3edff
+    );
+}
+
+.task-form .desired-time-group select {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+
+    padding: 0 5px;
+
+    border: 1px solid #e4dcf3;
+    border-radius: 11px;
+
+    background: #ffffff;
+    color: #51347e;
+
+    text-align: center;
+    font-size: 13px;
+    font-weight: 650;
+
+    cursor: pointer;
+}
+
+.task-form .desired-time-group select:focus {
+    border-color: #8052df;
+    box-shadow: 0 0 0 3px rgba(128, 82, 223, 0.12);
+}
+
+.task-form .time-colon {
+    color: #7749d1;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* =========================================
+   DURATION
+========================================= */
+
+.task-form .duration-input-group {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    min-width: 0;
+}
+
+.task-form .duration-input-group input,
+.task-form .duration-input-group select {
+    width: 100%;
+    min-width: 0;
+}
+
+/* =========================================
+   TASK MARKS PANEL
+========================================= */
+
+.task-form .marks-section {
+    margin-top: 8px;
+    padding: 24px;
+
+    border: 1px solid #e8defa;
+    border-radius: 19px;
+
+    background: linear-gradient(
+        145deg,
+        #faf7ff,
+        #f5f0ff
+    );
+}
+
+.task-form .marks-section h3 {
+    margin: 0 0 8px;
+
+    color: #34204f;
+    font-size: 18px;
+    font-weight: 750;
+}
+
+.task-form .marks-section > p {
+    margin: 0 0 24px;
+
+    color: #827791;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.task-form .marks-section .form-field {
+    margin-bottom: 21px;
+}
+
+.task-form .marks-section .form-field:last-child {
+    margin-bottom: 0;
+}
+
+.task-form .marks-section input {
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* On-time marks */
+
+.task-form .marks-section .form-field:nth-of-type(1) input:focus {
+    border-color: #16a34a;
+    box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.10);
+}
+
+/* =========================================
+   SAVE / UPDATE BUTTON
+========================================= */
+
+.task-form .save-btn {
+    display: block;
+
+    width: 100%;
+    min-height: 55px;
+
+    margin-top: 28px;
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        110deg,
+        #8052e8,
+        #6538c9
+    );
+
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 750;
+    letter-spacing: 0.3px;
+
+    cursor: pointer;
+
+    box-shadow: 0 9px 20px rgba(103, 57, 200, 0.24);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+.task-form .save-btn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.07);
+
+    box-shadow: 0 13px 26px rgba(103, 57, 200, 0.32);
+}
+
+.task-form .save-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(103, 57, 200, 0.18);
+}
+
+.task-form .save-btn:focus-visible {
+    outline: 3px solid #cbb8ff;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 768px) {
+    .task-form {
+        max-width: 580px;
+        padding: 27px;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 600px) {
+    .task-form {
+        width: calc(100% - 24px);
+        margin: 20px auto;
+        padding: 22px 17px;
+
+        border-radius: 19px;
+    }
+
+    .task-form .form-heading {
+        gap: 12px;
+        margin-bottom: 24px;
+        padding-bottom: 20px;
+    }
+
+    .task-form .form-icon {
+        width: 47px;
+        height: 47px;
+        border-radius: 14px;
+        font-size: 23px;
+    }
+
+    .task-form .form-heading h2 {
+        font-size: 22px;
+    }
+
+    .task-form .form-heading p {
+        font-size: 12px;
+    }
+
+    .task-form .form-field {
+        margin-bottom: 21px;
+    }
+
+    .task-form .desired-time-group {
+        grid-template-columns:
+            minmax(0, 1fr)
+            8px
+            minmax(0, 1fr)
+            minmax(0, 1.1fr);
+
+        gap: 5px;
+        padding: 8px;
+    }
+
+    .task-form .desired-time-group select {
+        height: 44px;
+        padding: 0 2px;
+        font-size: 12px;
+    }
+
+    .task-form .time-colon {
+        font-size: 17px;
+    }
+
+    .task-form .duration-input-group {
+        gap: 8px;
+    }
+
+    .task-form .marks-section {
+        padding: 18px 14px;
+        border-radius: 16px;
+    }
+
+    .task-form .save-btn {
+        min-height: 51px;
+    }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+    .task-form {
+        width: calc(100% - 16px);
+        padding: 18px 12px;
+    }
+
+    .task-form .desired-time-group {
+        gap: 4px;
+        padding: 6px;
+    }
+
+    .task-form .desired-time-group select {
+        font-size: 11px;
+    }
+
+    .task-form .duration-input-group {
+        gap: 6px;
+    }
+
+    .task-form .duration-input-group input,
+    .task-form .duration-input-group select {
+        padding: 0 8px;
+        font-size: 12px;
+    }
+
+    .task-form .marks-section {
+        padding: 15px 11px;
+    }
+}
+
+
+ /* Fix: Save Task button visibility */
+.task-form {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.task-form button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 48px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: #6d28d9;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    visibility: visible;
+    opacity: 1;
+}
+
+.task-form button[type="submit"]:hover {
+    background: #5b21b6;
+}
+
+
+/* Close form button */
+.task-form .form-heading {
+    position: relative;
+    padding-right: 42px;
+}
+
+.task-form .close-form-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #b91c1c;
+
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.task-form .close-form-btn:hover {
+    background: #fecaca;
+}

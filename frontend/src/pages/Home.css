@@ -1,0 +1,43 @@
+.home {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    font-family: Arial, sans-serif;
+}
+
+.home h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+    color: #4f46e5;
+    letter-spacing: 1px;
+}
+
+.home p {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 30px;
+}
+
+.setup-btn {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.setup-btn:hover {
+    background: #4338ca;
+    transform: translateY(-2px);
+}

@@ -1,0 +1,161 @@
+/* ===== Navbar Main Container ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaf0;
+  box-shadow: 0 4px 18px rgba(31, 41, 55, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ===== Sadhna Brand ===== */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #24324a;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  flex-shrink: 0;
+}
+
+.brand-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 13px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  box-shadow: 0 5px 12px rgba(99, 102, 241, 0.25);
+}
+
+/* ===== Navigation Links Container ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ===== Individual Navigation Links ===== */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 17px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* ===== Hover Effect ===== */
+.nav-link:hover {
+  color: #5145cd;
+  background-color: #f1f0ff;
+  transform: translateY(-1px);
+}
+
+/* ===== Active Page ===== */
+.nav-link.active {
+  color: #ffffff;
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.2);
+}
+
+/* Active link hover */
+.nav-link.active:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #5558e8, #6d28d9);
+}
+
+/* ===== Keyboard Accessibility ===== */
+.brand:focus-visible,
+.nav-link:focus-visible {
+  outline: 3px solid #a5b4fc;
+  outline-offset: 3px;
+}
+
+/* ===== Tablet Responsive ===== */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 14px 3%;
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 16px;
+    gap: 14px;
+  }
+
+  .brand {
+    font-size: 23px;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 5px;
+    overflow-x: auto;
+    padding: 2px 0 6px;
+    scrollbar-width: thin;
+  }
+
+  .nav-link {
+    flex-shrink: 0;
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+}
+
+/* ===== Very Small Screens ===== */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 12px;
+  }
+
+  .nav-link {
+    padding: 9px 10px;
+    font-size: 12px;
+  }
+}
